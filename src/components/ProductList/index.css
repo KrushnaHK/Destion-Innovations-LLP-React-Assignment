@@ -106,3 +106,17 @@
       font-size: 15px;
     }
   }
+
+  @media screen and (max-width: 430px) {
+    .product-list .product-list-buttons .edit-button {
+      font-size: 8px;
+      padding: 6px 10px;
+    }
+    .product-list .product-list-buttons .delete-button{
+      font-size: 8px;
+      padding: 6px 10px;
+    }
+    .product-list li{
+      font-size: 12px;
+    }
+  }
