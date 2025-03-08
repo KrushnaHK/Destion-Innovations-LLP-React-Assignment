@@ -1,0 +1,108 @@
+.product-list-container {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 30px;
+    padding-top: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-list-container h2 {
+    color: #091133;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .product-list-container select,
+  .product-list-container input {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .product-list-container button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .product-list-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    color: #091133;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .product-list li:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .product-list-buttons button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .product-list-buttons button:hover {
+    background-color: #d0d0d0;
+  }
+
+  .product-list .product-list-buttons .edit-button {
+    background-color: #51c987; /* Or your preferred edit button color */
+    color: #ffffff;
+    font-weight: 600;
+}
+  .product-list .product-list-buttons .delete-button {
+    background-color: red;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .product-list-container h2{
+      font-size: 30px;
+    }
+    .product-list-container button{
+      padding: 8px 15px;
+    }
+    .product-list .product-list-buttons .edit-button {
+      font-size: 12px;
+    }
+    .product-list .product-list-buttons .delete-button{
+      font-size: 12px;
+    }
+    .product-list li{
+      font-size: 15px;
+    }
+  }
