@@ -11,7 +11,8 @@ function ProductDetail({ product, onClose }) {
       <p>Description: {product.productDescription}</p>
       <p>Price: ₹{product.price}</p>
       <p>Store: {product.storeName}</p>
-      <button onClick={onClose}>Close</button>
+      <button onClick={(e) => { e.stopPropagation(); onClose(); }}>Close</button>
+
     </div>
   );
 }

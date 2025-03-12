@@ -103,16 +103,18 @@ function ProductList() {
         {showProductForm && <ProductForm onClose={() => setShowProductForm(false)} product={productToEdit} onSubmit={handleAddOrUpdate} />}
         <ul className="product-list">
           {filteredProducts.map(product => (
-            <li key={product.productId}>
+            <li key={product.productId} onClick={() => setSelectedProductId(product.productId)}>
               {product.productName} - ₹{product.price}
               <div className="product-list-buttons">
-                <button className='edit-button' onClick={() => handleEdit(product)}>Edit</button>
-                <button className='delete-button' onClick={() => handleDelete(product.productId)}>Delete</button>
+                <button className='edit-button' onClick={(e) => { e.stopPropagation(); handleEdit(product); }}>Edit</button>
+                <button className='delete-button' onClick={(e) => { e.stopPropagation(); handleDelete(product.productId); }}>Delete</button>
               </div>
-              {selectedProductId === product.productId && <ProductDetail product={product} onClose={() => setSelectedProductId(null)} />}
+              {selectedProductId === product.productId && (
+                <ProductDetail product={product} onClose={() => setSelectedProductId(null)} />
+              )}
             </li>
           ))}
-        </ul>
+      </ul>
       </div>
     </div>
   );
